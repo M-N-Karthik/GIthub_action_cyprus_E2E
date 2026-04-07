@@ -1,0 +1,24 @@
+{
+  "name": "github_action_cyprus_e2e",
+  "version": "1.0.0",
+  "description": "Cyprus e2e testing",
+  "main": "index.js",
+  "scripts": {
+    "test:e2e": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M-N-Karthik/GIthub_action_cyprus_E2E.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/M-N-Karthik/GIthub_action_cyprus_E2E/issues"
+  },
+  "homepage": "https://github.com/M-N-Karthik/GIthub_action_cyprus_E2E#readme",
+  "devDependencies": {
+    "cypress": "13.6.1"
+  }
+}
