@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         with:
-          repository: M-N-Karthik/GIthub_action_cyprus_E2E/.github/workflows/e2e.yaml
+          repository: M-N-Karthik/GIthub_action_cyprus_E2E
           ref: main
           token: ${{ secrets.CYPRESS_RECORD_KEY || secrets.GITHUB_TOKEN }}
       - name: Set up Node.js
