@@ -1,11 +1,21 @@
 name: e2e-cypress
-on: workflow_dispatch
+on: 
+    workflow_call:
+      secrets:
+        CYPRESS_RECORD_KEY:
+          required: true
+          description: 'Cypress record key for recording test results'
+
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          repository: ./.github/workflows/e2e.yaml
+          ref: main
+          token: ${{ secrets.CYPRESS_RECORD_KEY || secrets.GITHUB_TOKEN }}
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
